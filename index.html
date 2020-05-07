@@ -34,11 +34,12 @@ See https://github.com/adobe-type-tools/cmap-resources
   <link rel="resource" type="application/l10n" href="locale/locale.properties">
   <script src="build/pdf.js"></script>
   <script src="viewer.js"></script>
+
+  <!-- Added by Shen Yang - 2020/5/7 -->
   <script>
-    var loadingTask = pdfjsLib.getDocument('document.pdf');
+    var loadingTask = pdfjsLib.getDocument('document.pdf'); //change the value of 'defaultUrl' to 'document.pdf' in viewer.js
     loadingTask.promise.then(function(pdf) {
-      console.log("It's downloaded");
-      if (document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
+      if (document.getElementById("loadingInfo") !== null) {
         document.getElementById("loadingInfo").style.display = 'none';
       }
     });
@@ -52,6 +53,7 @@ See https://github.com/adobe-type-tools/cmap-resources
       color: white;
     }
   </style>
+  <!-- End of Added by Shen Yang - 2020/5/7 -->
 </head>
 
 <body tabindex="1" class="loadingInProgress">

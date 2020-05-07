@@ -1255,6 +1255,9 @@ var PDFViewerApplication = {
     var _this9 = this;
 
     if (this.downloadComplete) {
+      if(document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
+        document.getElementById("loadingInfo").hide();
+      }
       return;
     }
 
@@ -1273,10 +1276,6 @@ var PDFViewerApplication = {
         this.loadingBar.show();
         this.disableAutoFetchLoadingBarTimeout = setTimeout(function () {
           _this9.loadingBar.hide();
-          
-          if(document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
-            document.getElementById("loadingInfo").hide();
-          }
     
           _this9.disableAutoFetchLoadingBarTimeout = null;
         }, DISABLE_AUTO_FETCH_LOADING_BAR_TIMEOUT);
@@ -1291,10 +1290,6 @@ var PDFViewerApplication = {
       _this10.downloadComplete = true;
 
       _this10.loadingBar.hide();
-
-      if(document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
-        document.getElementById("loadingInfo").hide();
-      }
 
       firstPagePromise.then(function () {
         _this10.eventBus.dispatch("documentloaded", {

@@ -1255,9 +1255,6 @@ var PDFViewerApplication = {
     var _this9 = this;
 
     if (this.downloadComplete) {
-      if(document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
-        document.getElementById("loadingInfo").hide();
-      }
       console.log("It's downloaded");
       return;
     }

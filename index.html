@@ -34,6 +34,13 @@ See https://github.com/adobe-type-tools/cmap-resources
   <link rel="resource" type="application/l10n" href="locale/locale.properties">
   <script src="build/pdf.js"></script>
   <script src="viewer.js"></script>
+  <script>
+    if (new PDFDocumentLoadingTask(true)) {
+      if (document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
+        document.getElementById("loadingInfo").hide();
+      }
+    }
+  </script>
   <style>
     #loadingInfo {
       position: absolute;

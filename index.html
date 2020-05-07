@@ -34,9 +34,19 @@ See https://github.com/adobe-type-tools/cmap-resources
   <link rel="resource" type="application/l10n" href="locale/locale.properties">
   <script src="build/pdf.js"></script>
   <script src="viewer.js"></script>
+  <style>
+    #loadingInfo {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      text-align: center;
+      color: white;
+    }
+  </style>
 </head>
 
 <body tabindex="1" class="loadingInProgress">
+  <div id="loadingInfo">檔案下載中...</div>
   <div id="outerContainer">
 
     <div id="sidebarContainer">
@@ -276,7 +286,7 @@ See https://github.com/adobe-type-tools/cmap-resources
       </menu>
 
       <div id="viewerContainer" tabindex="0">
-        <div id="viewer" class="pdfViewer">檔案下載中</div>
+        <div id="viewer" class="pdfViewer"></div>
       </div>
 
       <div id="errorWrapper" hidden='true'>

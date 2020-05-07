@@ -1288,8 +1288,8 @@ var PDFViewerApplication = {
 
       _this10.loadingBar.hide();
 
-      if(getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
-        getElementById("loadingInfo").hide();
+      if(document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
+        document.getElementById("loadingInfo").hide();
       }
 
       firstPagePromise.then(function () {

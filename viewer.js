@@ -4822,7 +4822,7 @@ var defaultOptions = {
     kind: OptionKind.VIEWER
   };
   defaultOptions.locale = {
-    value: typeof navigator !== "undefined" ? navigator.language : "zh-TW",
+    value: typeof navigator !== "undefined" ? navigator.language : "en-US",
     kind: OptionKind.VIEWER
   };
 }
@@ -14525,7 +14525,7 @@ var GenericExternalServices = /*#__PURE__*/function (_DefaultExternalServi) {
     key: "createL10n",
     value: function createL10n(_ref) {
       var _ref$locale = _ref.locale,
-          locale = _ref$locale === void 0 ? "zh-TW" : _ref$locale;
+          locale = _ref$locale === void 0 ? "en-US" : _ref$locale;
       return new _genericl10n.GenericL10n(locale);
     }
   }]);

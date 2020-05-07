@@ -1273,7 +1273,11 @@ var PDFViewerApplication = {
         this.loadingBar.show();
         this.disableAutoFetchLoadingBarTimeout = setTimeout(function () {
           _this9.loadingBar.hide();
-
+          
+          if(document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
+            document.getElementById("loadingInfo").hide();
+          }
+    
           _this9.disableAutoFetchLoadingBarTimeout = null;
         }, DISABLE_AUTO_FETCH_LOADING_BAR_TIMEOUT);
       }

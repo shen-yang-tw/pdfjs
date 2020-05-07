@@ -4822,7 +4822,7 @@ var defaultOptions = {
     kind: OptionKind.VIEWER
   };
   defaultOptions.locale = {
-    value: typeof navigator !== "undefined" ? navigator.language : "en-US",
+    value: typeof navigator !== "undefined" ? navigator.language : "zh-TW",
     kind: OptionKind.VIEWER
   };
 }

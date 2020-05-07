@@ -1255,10 +1255,6 @@ var PDFViewerApplication = {
     var _this9 = this;
 
     if (this.downloadComplete) {
-      console.log("It's downloaded");
-      if (document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
-        document.getElementById("loadingInfo").style.display = 'none';
-      }
       return;
     }
 
@@ -4666,7 +4662,7 @@ var defaultOptions = {
     kind: OptionKind.VIEWER + OptionKind.PREFERENCE
   },
   defaultUrl: {
-    value: "document.pdf",
+    value: "compressed.tracemonkey-pldi-09.pdf",
     kind: OptionKind.VIEWER
   },
   defaultZoomValue: {

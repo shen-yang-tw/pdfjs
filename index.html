@@ -35,11 +35,13 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script src="build/pdf.js"></script>
   <script src="viewer.js"></script>
   <script>
-    if (new PDFDocumentLoadingTask(true)) {
+    var loadingTask = pdfjsLib.getDocument('document.pdf');
+    loadingTask.promise.then(function(pdf) {
+      console.log("It's downloaded");
       if (document.getElementById("loadingInfo") !== null) { //Added by Shen Yang - 2020/5/7
         document.getElementById("loadingInfo").style.display = 'none';
       }
-    }
+    });
   </script>
   <style>
     #loadingInfo {

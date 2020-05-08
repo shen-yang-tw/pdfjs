@@ -42,8 +42,8 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script>
     var url = 'document.pdf';
     var loadingTask = pdfjsLib.getDocument(url);
-    PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
     loadingTask.promise.then(function(pdf) {
+      PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
       var info = document.getElementById("loadingInfo")
       if (info !== null) {
         info.style.display = 'none';

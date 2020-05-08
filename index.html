@@ -42,7 +42,7 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script>
     PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
     // var url = 'document.pdf';
-    var loadingTask = pdfjsLib.getDocument(PDFViewerApplicationOptions.get('defaultUrl'));
+    var loadingTask = pdfjsLib.getDocument('doc.pdf');
     loadingTask.promise.then(function(pdf) {
       var info = document.getElementById("loadingInfo")
       if (info !== null) {

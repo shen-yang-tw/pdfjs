@@ -36,6 +36,8 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script src="viewer.js"></script>
 
   <!-- Added by Shen Yang - 2020/5/7 -->
+  <!-- Using the URL#pdfName.pdf in the browser search bar to replace the default pdf
+    ex.: https://shen-yang-tw.github.io/pdfjs/index.html#doc.pdf -->
   <script>
     var loadingTask = pdfjsLib.getDocument('document.pdf'); //change the value of 'defaultUrl' to 'document.pdf' in viewer.js
     loadingTask.promise.then(function(pdf) {

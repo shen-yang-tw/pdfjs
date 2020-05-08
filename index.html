@@ -40,7 +40,7 @@ See https://github.com/adobe-type-tools/cmap-resources
     ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf
     ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf -->
   <script>
-    var url = '?file=./doc.pdf'; //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
+    var url = 'index.html?file=./doc.pdf'; //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
     var loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then(function(pdf) {
       var info = document.getElementById("loadingInfo")

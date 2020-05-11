@@ -40,10 +40,10 @@ See https://github.com/adobe-type-tools/cmap-resources
     ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf
     ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf -->
   <script>
-    PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
-    function loadingInfo() {
-      var url = 'document.pdf';
-      var loadingTask = pdfjsLib.getDocument('document.pdf');
+    // PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
+    function loadingInfo(doc) {
+      // var url = 'document.pdf';
+      var loadingTask = pdfjsLib.getDocument(doc);
       loadingTask.promise.then(function(pdf) {
         var info = document.getElementById("loadingInfo")
         if (info !== null) {
@@ -51,9 +51,9 @@ See https://github.com/adobe-type-tools/cmap-resources
         }
       });
     }
-    window.onload = function() {
-      loadingInfo()
-    }
+    // window.onload = function() {
+    //   loadingInfo('document.pdf')
+    // }
   </script>
   <style>
     #loadingInfo {

@@ -36,9 +36,10 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script src="viewer.js"></script>
 
   <!-- Added by Shen Yang - 2020/5/7 -->
-  <!-- Using the URL#pdfName.pdf in the browser search bar to replace the default pdf
-    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf#loadingInfo(doc.pdf)
-    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf#loadingInfo(http://doc.pdf) -->
+  <!-- Using the URL&pdfName.pdf in the browser search bar to replace the default pdf.
+    Cannot use the '#' to replace '&' because of custom javascript function 'loadingInfo'
+    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf&loadingInfo(doc.pdf)
+    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf&loadingInfo(http://doc.pdf) -->
   <script>
     // PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
     function loadingInfo(doc) {
@@ -58,7 +59,6 @@ See https://github.com/adobe-type-tools/cmap-resources
       }
       if (window.location.search.includes('loadingInfo')) {
         doc = window.location.search.split('(').pop().split(')')[0]
-        console.log("loaded")
         loadingInfo(doc)
       }
     }

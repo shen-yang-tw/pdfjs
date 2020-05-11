@@ -57,7 +57,9 @@ See https://github.com/adobe-type-tools/cmap-resources
         loadingInfo('document.pdf')
       }
       if (window.location.search.startsWith('loadingInfo')) {
-        loadingInfo(window.location.search.split('(').pop().split(')')[0])
+        doc = window.location.search.split('(').pop().split(')')[0]
+        console.log(doc)
+        loadingInfo()
       }
     }
   </script>

@@ -41,16 +41,19 @@ See https://github.com/adobe-type-tools/cmap-resources
     ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf -->
   <script>
     PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
-    // var url = 'document.pdf';
-    var url = PDFViewerApplicationOptions.get("defaultUrl");
-    console.log(url);
-    var loadingTask = pdfjsLib.getDocument(url);
-    loadingTask.promise.then(function(pdf) {
-      var info = document.getElementById("loadingInfo")
-      if (info !== null) {
-        info.style.display = 'none';
-      }
-    });
+    function loadingInfo() {
+      var url = 'document.pdf';
+      var loadingTask = pdfjsLib.getDocument('document.pdf');
+      loadingTask.promise.then(function(pdf) {
+        var info = document.getElementById("loadingInfo")
+        if (info !== null) {
+          info.style.display = 'none';
+        }
+      });
+    }
+    window.onload = function() {
+      loadingInfo()
+    }
   </script>
   <style>
     #loadingInfo {

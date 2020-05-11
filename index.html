@@ -37,8 +37,8 @@ See https://github.com/adobe-type-tools/cmap-resources
 
   <!-- Added by Shen Yang - 2020/5/7 -->
   <!-- Using the URL#pdfName.pdf in the browser search bar to replace the default pdf
-    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf#loadingInfo('doc.pdf')
-    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf#loadingInfo('http://doc.pdf') -->
+    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf#loadingInfo(doc.pdf)
+    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf#loadingInfo(http://doc.pdf) -->
   <script>
     // PDFViewerApplicationOptions.set('defaultUrl', 'doc.pdf'); //change the value of 'defaultUrl' to 'doc.pdf' in viewer.js
     function loadingInfo(doc) {
@@ -57,7 +57,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         loadingInfo('document.pdf')
       }
       if (window.location.search.startsWith('loadingInfo')) {
-        loadingInfo(window.location.search.split(/[']/))
+        loadingInfo(window.location.search.split('(').pop().split(')')[0])
       }
     }
   </script>

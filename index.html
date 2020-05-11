@@ -54,12 +54,11 @@ See https://github.com/adobe-type-tools/cmap-resources
     window.onload = function() {
       //window.location.search - https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
       if (window.location.search == '') {
-        console.log("loaded")
         loadingInfo('document.pdf')
       }
-      if (window.location.search.startsWith('loadingInfo')) {
+      if (window.location.search.includes('loadingInfo')) {
         doc = window.location.search.split('(').pop().split(')')[0]
-        console.log("loaded")
+        console.log(doc)
         loadingInfo(doc)
       }
     }

@@ -35,11 +35,12 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script src="build/pdf.js"></script>
   <script src="viewer.js"></script>
 
-  <!-- Added by Shen Yang - 2020/5/11 -->
-  <!-- Using the URL&pdfName.pdf in the browser search bar to replace the default pdf.
+  <!-- Added by Shen Yang - 2020/5/12 -->
+  <!-- Using the <URL>?file=<path>&<name.pdf> in the browser search bar to replace the default pdf.
     Cannot use the '#' to replace '&' because of custom javascript function 'loadingInfo'
-    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf&loadingInfo(doc.pdf)
-    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf&loadingInfo(http://doc.pdf) -->
+    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=./doc.pdf&loadingInfo(doc.pdf) - relative path
+    ex.: https://shen-yang-tw.github.io/pdfjs/index.html?file=http://doc.pdf&loadingInfo(http://doc.pdf) - absolute path
+  -->
   <script>
     function loadingInfo(doc) {
       var loadingTask = pdfjsLib.getDocument(doc);
@@ -70,7 +71,7 @@ See https://github.com/adobe-type-tools/cmap-resources
       color: white;
     }
   </style>
-  <!-- End of Added by Shen Yang - 2020/5/11 -->
+  <!-- End of Added by Shen Yang -->
 </head>
 
 <body tabindex="1" class="loadingInProgress">

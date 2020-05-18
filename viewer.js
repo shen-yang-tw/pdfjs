@@ -14589,8 +14589,6 @@ function getDefaultPreferences() {
       "enablePermissions": false,
       "enablePrintAutoRotate": false,
       "enableWebGL": false,
-      //$FB: dispatch to DOM to allow event handling
-      "eventBusDispatchToDOM": true,
       "externalLinkTarget": 0,
       "historyUpdateUrl": false,
       "ignoreDestinationZoom": false,
